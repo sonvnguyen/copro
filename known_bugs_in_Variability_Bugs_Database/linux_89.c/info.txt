@@ -1,0 +1,6 @@
+[kernel/module.c]
+---
+int main(void) {
+	load_module(); // (1)
+	return 0;
+}

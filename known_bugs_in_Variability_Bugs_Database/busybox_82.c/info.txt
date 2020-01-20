@@ -1,0 +1,6 @@
+[coreutils/ls.c, coreutils/ls.c]
+---
+int main(int argc, char** argv) {
+	showfiles();
+	return 0;
+}

@@ -1,0 +1,9 @@
+[arch/parisc/mm/init.c, fs/proc/page.c, arch/parisc/include/asm/mmzone.h, arch/parisc/include/asm/mmzone.h, include/linux/mmzone.h, arch/parisc/include/asm/mmzone.h]
+---
+int main() {
+	setup_bootmem();
+#ifdef CONFIG_PROC_PAGE_MONITOR
+	kpageflags_read();
+#endif
+	return 0;
+}

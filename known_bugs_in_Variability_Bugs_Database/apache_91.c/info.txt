@@ -1,0 +1,7 @@
+[modules/generators/mod_cgi.c, modules/generators/mod_cgi.c]
+---
+int main(void) {
+	char *r = NULL;
+	cgi_handler(r);
+	return 0;
+}

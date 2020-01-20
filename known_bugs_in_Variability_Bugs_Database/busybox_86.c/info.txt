@@ -1,0 +1,6 @@
+[e2fsprogs/ext2fs/openfs.c]
+---
+int main(int argc, char** argv) {
+	ext2fs_open();
+	return 0;
+}

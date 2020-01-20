@@ -1,0 +1,8 @@
+[modules/ssl/ssl_engine_kernel.c]
+---
+int main(void) {
+#ifdef HAVE_TLS_ALPN
+	ssl_callback_alpn_select();
+#endif
+	return 0;
+}

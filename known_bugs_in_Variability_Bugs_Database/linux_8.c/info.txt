@@ -1,0 +1,6 @@
+[drivers/base/core.c, drivers/base/core.c, drivers/input/input.c, drivers/input/input.c, include/linux/kobject.h]
+---
+int main(int argc, char** argv) {
+	input_add_uevent_modalias_var(); // (1)
+	return 0;
+}

@@ -1,0 +1,9 @@
+drivers/net/3c59x.c
+---
+int main()
+{
+#ifdef CONFIG_VORTEX
+  acpi_set_WOL(1); 
+#endif
+  return 0;
+}

@@ -1,0 +1,6 @@
+[net/ipv4/udp.c, net/ipv4/udp.c, net/core/skbuff.c, include/linux/skbuff.h, kernel/softirq.c]
+---
+int main(int argc, char** argv) {
+	udp_poll();
+	return 0;
+}

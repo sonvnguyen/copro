@@ -1,0 +1,6 @@
+[init/init.c, init/init.c, init/init.c]
+---
+int main(int argc, char** argv) {
+	run_actions();
+	return 0;
+}

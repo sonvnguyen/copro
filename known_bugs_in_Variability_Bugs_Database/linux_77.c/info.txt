@@ -1,0 +1,8 @@
+[kernel/rcutree_plugin.h, kernel/rcutree_plugin.h]
+---
+int main(void) {
+#ifdef CONFIG_RCU_CPU_STALL_INFO
+	print_cpu_stall_info(0); // (1)
+#endif
+	return 0;
+}

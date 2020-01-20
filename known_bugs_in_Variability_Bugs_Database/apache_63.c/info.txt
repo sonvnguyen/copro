@@ -1,0 +1,8 @@
+[include/util_ldap.h, include/util_ldap.h, modules/experimental/util_ldap.c, modules/experimental/util_ldap.c]
+---
+int main(void) {
+#ifdef APU_HAS_LDAP
+	util_ldap_connection_open();
+#endif
+	return 0;
+}

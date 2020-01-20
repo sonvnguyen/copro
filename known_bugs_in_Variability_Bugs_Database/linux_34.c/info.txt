@@ -1,0 +1,7 @@
+[include/net/inet_hashtables.h, include/net/inet_hashtables.h]
+---
+int main(void) {
+	inet_ehash_locks_alloc(); // (1)
+	inet_ehash_locks_free(); // (3)
+	return 0;
+}

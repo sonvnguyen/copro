@@ -1,0 +1,7 @@
+[Marlin/cardreader.cpp]
+---
+int main(int argc, char **argv)
+{
+  cardreader("");
+  return 0;
+}

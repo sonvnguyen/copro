@@ -1,0 +1,9 @@
+[arch/powerpc/kernel/kprobes.c]
+---
+int main(int argc, char** argv) {
+	allocate_buffer();
+#ifdef CONFIG_KPROBES
+	*buffer = 'a'; // ERROR
+#endif
+	return 0;
+}

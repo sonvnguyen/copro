@@ -1,0 +1,2 @@
+DC_US:AP_FILTER_H_false ---> 1_true : GLOBAL.ap_pass_brigade, GLOBAL.ap_get_brigade, GLOBAL.ap_fputs, 
+rank:1

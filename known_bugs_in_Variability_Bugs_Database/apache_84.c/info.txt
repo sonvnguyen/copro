@@ -1,0 +1,8 @@
+[modules/experimental/util_ldap_cache.c, modules/experimental/util_ldap_cache.c, modules/experimental/util_ldap_cache.c]
+---
+int main(void) {
+#ifdef APU_HAS_LDAP
+	util_ldap_cache_init();
+#endif
+	return 0;
+}

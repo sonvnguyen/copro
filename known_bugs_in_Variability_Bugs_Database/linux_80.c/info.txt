@@ -1,0 +1,7 @@
+[fs/jffs2/super.c, fs/jffs2/super.c, drivers/mtd/mtdsuper.c, drivers/mtd/mtdsuper.c, fs/jffs2/super.c, fs/jffs2/fs.c, fs/jffs2/fs.c, fs/jffs2/wbuf.c, fs/jffs2/wbuf.c, fs/jffs2/wbuf.c, fs/jffs2/wbuf.c, fs/jffs2/wbuf.c]
+---
+int main() {
+	jffs2_nor_wbuf_flash_setup(); // (1)
+	jffs2_flash_write(); // (2)
+	return 0;
+}

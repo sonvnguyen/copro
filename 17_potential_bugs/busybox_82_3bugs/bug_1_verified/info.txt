@@ -1,0 +1,1 @@
+Some of these bugs were also reported in http://lists.uclibc.org/pipermail/busybox/2000-October/034977.html

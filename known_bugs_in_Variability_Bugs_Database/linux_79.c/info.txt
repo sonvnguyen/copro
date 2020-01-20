@@ -1,0 +1,8 @@
+[drivers/tty/pty.c, drivers/tty/pty.c, drivers/tty/pty.c, drivers/tty/tty_io.c, drivers/tty/pty.c, fs/devpts/inode.c, fs/devpts/inode.c]
+---
+int main() {
+#ifdef CONFIG_UNIX98_PTYS
+	ptmx_open(); // (1)
+#endif
+	return 0;
+}

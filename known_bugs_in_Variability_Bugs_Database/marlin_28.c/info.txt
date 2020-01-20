@@ -1,0 +1,6 @@
+[Marlin/configuration_store.cpp]
+---
+int main(int argc, char **argv) {
+	Config_PrintSettings(false);
+	return 0;
+}

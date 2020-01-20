@@ -1,0 +1,8 @@
+[drivers/regulator/max8660.c]
+---
+int main() {
+#ifdef CONFIG_REGULATOR_MAX8660
+	max8660_probe();
+#endif
+	return 0;
+}

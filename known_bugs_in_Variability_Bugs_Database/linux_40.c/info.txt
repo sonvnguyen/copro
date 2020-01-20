@@ -1,0 +1,13 @@
+[arch/x86/pci/common.c, arch/x86/pci/common.c, drivers/base/core.c, drivers/pci/pci-sysfs.c, arch/x86/include/asm/pci.h, arch/x86/include/asm/pci.h, arch/x86/include/asm/topology.h, include/linux/cpumask.h]
+---
+int main(int argc, char** argv) {
+#ifdef CONFIG_NUMA
+	nr_node_ids = rand() % (MAX_NUMNODES-1);
+#endif
+	setup_node_to_cpumask_map();
+#ifdef CONFIG_PCI
+	int node = pcibios_scan_root();
+	dev_attr_show(node);
+#endif
+	return 0;
+}

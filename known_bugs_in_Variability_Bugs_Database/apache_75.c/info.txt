@@ -1,0 +1,13 @@
+[include/http_log.h]
+---
+int main(void) {
+#ifndef APLOG_MAX_LOGLEVEL
+	if (APLOG_LEVELMASK <= APLOG_NOTICE)
+		ap_get_server_module_loglevel();
+#else
+	if (APLOG_LEVELMASK <= APLOG_MAX)
+	ap_get_server_module_loglevel();
+#endif
+
+	return 0;
+}

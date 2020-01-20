@@ -1,0 +1,6 @@
+[modules/generators/mod_status.c, modules/generators/mod_status.c]
+---
+int main(void) {
+	register_hooks();
+	return 0;
+}

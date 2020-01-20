@@ -1,0 +1,8 @@
+[net/core/netpoll.c]
+---
+int main(void) {
+#ifdef CONFIG_NETPOLL
+	netpoll_setup(); // (1)
+#endif
+	return 0;
+}

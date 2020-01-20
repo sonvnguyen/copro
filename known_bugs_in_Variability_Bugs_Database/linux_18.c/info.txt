@@ -1,0 +1,9 @@
+[arch/x86/kernel/smpboot.c, arch/x86/kernel/smpboot.c, arch/x86/kernel/apic/apic.c]
+---
+int main(void) {
+#ifdef CONFIG_SMP
+	smp_found_config = nondet(); // (1)
+	native_smp_prepare_cpus();// (2)
+#endif
+	return 0;
+}

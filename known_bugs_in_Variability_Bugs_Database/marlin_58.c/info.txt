@@ -1,0 +1,6 @@
+[Marlin/ultralcd.cpp]
+---
+int main(void) {
+	lcd_tune_menu();
+	return 0;
+}

@@ -1,0 +1,6 @@
+[fs/reiserfs/namei.c, fs/reiserfs/xattr_security.c]
+---
+int main(void) {
+	reiserfs_create(); // (1)
+	return 0;
+}

@@ -1,0 +1,8 @@
+arch/arm/mach-omap2/board-h4.c
+---
+int main(int argc, char** argv)
+{
+#ifdef CONFIG_MACH_OMAP_H4
+  omap_h4_map_io();
+#endif
+}

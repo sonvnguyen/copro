@@ -1,0 +1,6 @@
+[support/ab.c]
+---
+int main(void) {
+	parse_url();
+	return 0;
+}

@@ -1,0 +1,7 @@
+[networking/httpd.c]
+---
+int main(int argc, char** argv) {
+	const char request[] = "POST";
+	handleIncoming(request);
+	return 0;
+}

@@ -1,0 +1,10 @@
+[drivers/extcon/extcon-class.c, drivers/extcon/extcon-class.c, drivers/base/class.c, lib/kobject.c, lib/kobject.c, lib/kobject.c, lib/kobject.c, fs/sysfs/dir.c, fs/sysfs/dir.c, fs/sysfs/dir.c]
+---
+int main(void) {
+#ifdef CONFIG_EXTCON
+	extcon_class_init(); // (1)
+	extcon_class_exit();// (7)
+	extcon_class_init();// (8)
+#endif
+	return 0;
+}

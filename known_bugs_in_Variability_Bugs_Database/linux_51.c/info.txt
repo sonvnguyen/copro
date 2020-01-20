@@ -1,0 +1,8 @@
+[arch/s390/crypto/prng.c, arch/s390/crypto/prng.c]
+---
+int main(int argc, char *argv[]) {
+#ifdef CONFIG_S390_PRNG
+	prng_seed(16);
+#endif
+	return 0;
+}

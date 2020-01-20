@@ -1,0 +1,8 @@
+[drivers/base/dd.c, drivers/i2c/i2c-core.c, drivers/mfd/twl-core.c, kernel/irq/irqdomain.c, include/linux/irqdomain.h]
+---
+int main() {
+#ifdef CONFIG_TWL4030_CORE
+	twl_probe(); // (1)
+#endif
+	return 0;
+}

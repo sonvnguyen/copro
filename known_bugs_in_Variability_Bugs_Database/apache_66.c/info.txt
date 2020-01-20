@@ -1,0 +1,6 @@
+[server/scoreboard.c]
+---
+int main(void) {
+	ap_reopen_scoreboard();
+	return 0;
+}

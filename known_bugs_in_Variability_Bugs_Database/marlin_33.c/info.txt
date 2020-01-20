@@ -1,0 +1,9 @@
+[Marlin/Marlin.pde]
+---
+int main(int argc, char **argv)
+{
+  #ifdef TEMP_RESIDENCY_TIME
+    process_commands();
+  #endif
+  return 0;
+}

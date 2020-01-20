@@ -1,0 +1,11 @@
+[sound/soc/codecs/da7210.c]
+---
+int main(int argc, char** argv) {
+#ifdef CONFIG_SND_SOC_DA7210
+	da7210_init();
+#endif
+#ifdef CONFIG_SND_SOC_AK4642
+	ak4642_init();
+#endif
+	return 0;
+}

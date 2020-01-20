@@ -1,0 +1,342 @@
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+		<meta charset="utf-8">
+		<title>The Variability Bugs Database</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+		<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="assets/css/common.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="assets/js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+	<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+	<body><div id="MathJax_Message" style="display: none;"></div>
+		<div id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" style="color:white;" href="#home">The <strong>V</strong>ariability <strong>B</strong>ugs <strong>D</strong>ata<strong>b</strong>ase</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#home">Home</a>
+						</li>
+						<li>
+							<a href="#search">Database</a>
+						</li>
+						<li>
+							<a href="#contribution">Contribute</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="left-inner-addon">
+							<span class="glyphicon glyphicon-search"></span>
+							<input id="search" class="form-control" placeholder="search the database" type="text">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		 
+		<div id="content"><div><div class="container-fluid">
+	<div class="row">
+		<div id="bug_content" class="main">
+			<div class="page-header">
+				<ul class="nav nav-pills pull-right">
+					<li id="raw" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#bug">View raw files <span class="caret"></span> </a>
+						<ul class="dropdown-menu" role="menu"><li><a href="https://bitbucket.org/modelsteam/vbdb/raw/default/apache/report/35ae2e2.bug" target="_blank">Info</a></li><li><a href="https://bitbucket.org/modelsteam/vbdb/raw/default/apache/simple/35ae2e2.c" target="_blank">Simplified bug</a></li></ul>
+					</li>
+				</ul>
+				
+				<div class="repo-title">
+					<div>
+				    	<img alt="Apache logo" src="https://www.apache.org/images/feather-small.gif">	
+				    	<span>Apache</span>
+					</div>
+			    	<span class="h3">Pointer "eckey" is assigned, but there is no call to the free function.</span>
+			    </div>
+				
+				<span class="hide">apache/35ae2e2</span>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-6">
+					
+					<p id="descr">Pointer "eckey" is assigned, but there is no call to the free function.</p>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<p id="commit_info">
+								But fixed by commit <a href="https://github.com/apache/httpd/commit/35ae2e259e42540a782753feb6de5a6d8099784a" target="_blank">35ae2e259e4</a>
+								<br>
+								Parent commit tree <a href="https://github.com/apache/httpd/tree/35ae2e259e42540a782753feb6de5a6d8099784a^" target="_blank">here</a>
+							</p>
+						</div>
+						
+						<div class="col-lg-6">
+							<ul class="nav nav-pills pull-right">
+								<li id="links" class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#bug">Related links <span class="caret"></span> </a>
+									<ul class="dropdown-menu" role="menu"></ul>
+								</li>
+							</ul>
+						</div>
+					</div>						
+				</div>
+				
+				<div class="col-lg-6">
+					<table class="table table-bordered table-striped">
+						<tbody><tr><th>Type</th><td> <a href="http://cwe.mitre.org/data/definitions/401.html" target="_blank">fail to release memory before removing last reference to it (CWE 401)</a></td></tr><tr><th>Config</th><td>HAVE_ECC (1st degree)</td></tr><tr><th>Fix-in</th><td>code</td></tr><tr><th>Location</th><td>modules/ssl/</td></tr></tbody>
+					</table>	
+				</div>
+			</div>
+			
+			<section id="report">
+				<ul class="nav nav-tabs" role="tablist"><li class="active"><a href="#simplified_bug" role="tab" data-toggle="tab">Simplified bug</a></li><li><a href="#trace" role="tab" data-toggle="tab">Trace</a></li><li><a href="#comments" role="tab" data-toggle="tab">Discussion</a></li></ul>
+				<div class="tab-content"><div class="tab-pane active" id="simplified_bug"><code class="language-c prettyprint highlight lang-c linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdlib.h&gt;</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="kwd">int</span><span class="pln"> ssl_init_server_certs</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> HAVE_ECC</span><br></li><li class="L5"><span class="pln">&nbsp; </span><span class="kwd">int</span><span class="pln"> </span><span class="pun">*</span><span class="pln">eckey</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> HAVE_ECC</span><br></li><li class="L9"><span class="pln">&nbsp; eckey </span><span class="pun">=</span><span class="pln"> malloc</span><span class="pun">(</span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">int</span><span class="pun">));</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">rand</span><span class="pun">()</span><span class="pln"> </span><span class="pun">%</span><span class="pln"> </span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; </span><span class="pun">*</span><span class="pln">eckey </span><span class="pun">=</span><span class="pln"> </span><span class="lit">30</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="com">#if defined(SSL_CTX_set_ecdh_auto)</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; </span><span class="com">// do something</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="com">#else</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; </span><span class="pun">*</span><span class="pln">eckey </span><span class="pun">=</span><span class="pln"> </span><span class="lit">15</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; </span><span class="pun">}</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; </span><span class="com">// code making use of 'eckey'</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; </span><span class="com">// return having forgotten to free the memory</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="kwd">int</span><span class="pln"> ssl_init_server_ctx</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> ssl_init_server_certs</span><span class="pun">();</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="kwd">int</span><span class="pln"> ssl_init_ConfigureServer</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> ssl_init_server_ctx</span><span class="pun">();</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="kwd">int</span><span class="pln"> ssl_init_Module</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> ssl_init_ConfigureServer</span><span class="pun">();</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">(</span><span class="kwd">void</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; ssl_init_Module</span><span class="pun">();</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="pun">}</span></li></ol></code></div><div class="tab-pane" id="trace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="https://github.com/apache/httpd/tree/modules/ssl/ssl_engine_init.c/35ae2e259e42540a782753feb6de5a6d8099784a^#n141" target="_blank">modules/ssl/ssl_engine_init.c</a>:<span class="number">141</span>:<span class="line">ssl_init_Module()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">310</span>:<span class="line"> ssl_init_ConfigureServer()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="https://github.com/apache/httpd/tree/modules/ssl/ssl_engine_init.c/35ae2e259e42540a782753feb6de5a6d8099784a^#n1492" target="_blank">modules/ssl/ssl_engine_init.c</a>:<span class="number">1492</span>:<span class="line">ssl_init_ConfigureServer()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1505</span>:<span class="line"> ssl_init_server_ctx()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="https://github.com/apache/httpd/tree/modules/ssl/ssl_engine_init.c/35ae2e259e42540a782753feb6de5a6d8099784a^#n1383" target="_blank">modules/ssl/ssl_engine_init.c</a>:<span class="number">1383</span>:<span class="line">ssl_init_server_ctx()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1410</span>:<span class="line"> ssl_init_server_certs()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="https://github.com/apache/httpd/tree/modules/ssl/ssl_engine_init.c/35ae2e259e42540a782753feb6de5a6d8099784a^#n971" target="_blank">modules/ssl/ssl_engine_init.c</a>:<span class="number">971</span>:<span class="line">ssl_init_server_certs()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1141</span>:<span class="line"> SSL_CTX_set_tmp_ecdh(mctx-&gt;ssl_ctx, eckey);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="error">ERROR</span> <span class="number">1150</span>:<span class="line"> return APR_SUCCESS;</span></span><br></div><div class="tab-pane" id="comments">
+			<div>
+				<ul class="nav nav-pills pull-right">
+					<li class="active">
+						<a href="#comments_modal" data-toggle="modal">Write comment</a>
+					</li>
+				</ul>
+				<p>You can contribute to this project by writing a comment for this bug.<span class=""> No comments have been submitted for this bug yet.</span></p>
+			</div>
+			<section></section>
+		</div></div>
+			</section>
+		</div>
+		<div id="info" class="main hide">
+			<h3>404: Requested resource not found.</h3>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="comments_modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title">Write comment</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-group">
+					<input id="name_field" class="form-control" placeholder="Name" type="text">
+					<input id="email_field" class="form-control" placeholder="Email" type="email">
+					<textarea class="form-control" rows="3" placeholder="* Comment"></textarea>			
+					<div id="challenge" class="input-group hide">
+  						<span class="input-group-addon"></span>
+  						<input class="form-control" placeholder="* Please answer this challenge" type="number">
+					</div>
+				</form>
+
+				<div class="alert alert-success hide" role="alert">
+					Thank you for your comment.
+				</div>
+				<div class="alert alert-warning hide" role="alert">
+					You must fill in the input fields correctly.
+				</div>
+				<div class="alert alert-danger hide" role="alert">
+					A problem occured, please try again later.
+				</div>
+				<center>
+					<img src="assets/images/ajax-loader.gif" alt="loader">
+				</center>
+			</div>
+			<div class="modal-footer hide">
+				<button type="button" class="btn btn-default" data-dismiss="modal">
+					Cancel
+				</button>
+				<button id="submit" type="button" class="btn btn-primary">
+					Submit
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div></div>
+		
+		<div id="bar" class="progress" style="display: block; opacity: 0.503927;">
+			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">Loading in progress 100%</div>
+		</div>
+
+		<script src="assets/js/libs/jquery-1.7.1.min.js"></script>
+		<script src="assets/js/libs/underscore-min.js"></script>
+		<script src="assets/js/libs/backbone-min.js"></script>
+		<script src="assets/js/libs/jquery.syntaxhighlighter.min.js"></script>
+		<script src="assets/js/libs/js-yaml.min.js"></script>
+		<script src="assets/js/libs/jquery.infinitescroll.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" id=""></script>
+
+		<!-- custom code -->
+		<script src="assets/js/app.js"></script>
+		<script src="assets/js/model/Store.js"></script>
+		<script src="assets/js/model/Event.js"></script>
+		<script src="assets/js/model/DataProvider.js"></script>
+		<script src="assets/js/model/BugLoader.js"></script>
+		<script src="assets/js/model/NewsLoader.js"></script>
+		<script src="assets/js/utils/Utils.js"></script>
+		<script src="assets/js/utils/TwoDimensionsDictionary.js"></script>
+		<script src="assets/js/controller/BugDisplayer.js"></script>
+		<script src="assets/js/controller/BugController.js"></script>
+		<script src="assets/js/view/AView.js"></script>
+		<script src="assets/js/view/BugView.js"></script>
+		<script src="assets/js/view/HomeView.js"></script>
+		<script src="assets/js/view/SearchView.js"></script>
+		<script src="assets/js/view/ContributionView.js"></script>
+
+		<script type="text/template" id="comment_block">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<%= author %> <%= date %>
+				</div>
+				<div class="panel-body">
+					<%= content %>
+				</div>
+			</div>
+		</script>
+		
+		<script type="text/template" id="comment_tab">
+			<div>
+				<ul class="nav nav-pills pull-right">
+					<li class="active">
+						<a href="#comments_modal" data-toggle="modal">Write comment</a>
+					</li>
+				</ul>
+				<p>You can contribute to this project by writing a comment for this bug.<span class="hide"> No comments have been submitted for this bug yet.</span></p>
+			</div>
+			<section></section>
+		</script>
+		
+		<!-- Google Analytics -->
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-33454433-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+	
+<script type="text/javascript" src="http://balupton.github.com/jquery-syntaxhighlighter/prettify/prettify.min.js" id="script-httpbaluptongithubcomjquerysyntaxhighlighterprettifyprettifyminjs"></script><link type="text/css" rel="stylesheet" media="screen" href="http://balupton.github.com/jquery-syntaxhighlighter/prettify/prettify.min.css" id="stylesheet-httpbaluptongithubcomjquerysyntaxhighlighterprettifyprettifymincss"><link type="text/css" rel="stylesheet" media="screen" href="http://balupton.github.com/jquery-syntaxhighlighter/styles/style.min.css" id="stylesheet-httpbaluptongithubcomjquerysyntaxhighlighterstylesstylemincss"><link type="text/css" rel="stylesheet" media="screen" href="http://balupton.github.com/jquery-syntaxhighlighter/styles/theme-balupton.min.css" id="stylesheet-httpbaluptongithubcomjquerysyntaxhighlighterstylesthemebaluptonmincss"></body></html>

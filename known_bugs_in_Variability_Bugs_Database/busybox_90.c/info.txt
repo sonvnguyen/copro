@@ -1,0 +1,14 @@
+[networking/nameif.c, networking/nameif.c]
+---
+int main(int argc, char** argv) {
+	ethtable_t *clist = NULL;
+	ethtable_t *ch;
+
+	prepend_new_eth_table(&clist, argv[0]);
+
+#ifdef ENABLE_FEATURE_CLEAN_UP
+	for (ch = clist; ch; ch = ch->next) // ERROR
+	delete_eth_table(ch);
+#endif
+	return 0;
+}

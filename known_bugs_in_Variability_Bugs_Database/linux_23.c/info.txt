@@ -1,0 +1,8 @@
+[drivers/infiniband/hw/ocrdma/ocrdma_main.c, include/linux/if_vlan.h]
+---
+int main(int argc, char** argv) {
+#if defined(CONFIG_IPV6) || defined(CONFIG_VLAN_8021Q)
+	ocrdma_inet6addr_event(); // (1)
+#endif
+	return 0;
+}

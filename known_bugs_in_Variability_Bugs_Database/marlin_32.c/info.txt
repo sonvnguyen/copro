@@ -1,0 +1,7 @@
+[Marlin/ultralcd.pde]
+---
+int main(int argc, char **argv)
+{
+  ftostr51(512.5);
+  return 0;
+}

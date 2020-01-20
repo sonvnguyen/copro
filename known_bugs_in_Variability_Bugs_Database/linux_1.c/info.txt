@@ -1,0 +1,8 @@
+[drivers/net/arm/ep93xx_eth.c, drivers/net/arm/ep93xx_eth.c, mm/page_alloc.c]
+---
+int main(void) {
+#ifdef CONFIG_EP93XX_ETH
+	ep93xx_open(); // (1)
+#endif
+	return 0;
+}

@@ -1,0 +1,8 @@
+[init/main.c, drivers/platform/x86/acer-wmi.c, drivers/platform/x86/acer-wmi.c, drivers/platform/x86/wmi.c]
+---
+int main() {
+#if defined(CONFIG_X86) && defined(CONFIG_ACPI_WMI)
+	acer_wmi_init(); // (1)
+#endif
+	return 0;
+}

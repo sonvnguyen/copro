@@ -1,0 +1,23 @@
+[coreutils/ls.c, coreutils/ls.c]
+---
+int main(int argc, char **argv) {
+	struct dnode *curr, *head;
+	int size = 5;
+	struct dnode *arr[size];
+
+	for (int i = 0; i < size; i++) {
+		curr = (struct dnode *) malloc(sizeof(struct dnode));
+		curr->val = rand() % 10;
+		curr->next = head;
+		head = curr;
+		arr[(size - 1) - i] = curr;
+	}
+
+	if (rand() % 2) {
+#ifdef CONFIG_FEATURE_LS_SORTFILES
+		sort(arr, size);
+#endif
+		showdirs(arr);
+	}
+	return 0;
+}

@@ -1,0 +1,6 @@
+[kernel/time/tick-sched.c, kernel/hrtimer.c]
+---
+int main(int argc, char** argv) {
+	tick_nohz_stop_sched_tick();
+	return 0;
+}

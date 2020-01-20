@@ -1,0 +1,8 @@
+[src/main/http_core.c]
+---
+int main(void) {
+#ifdef WIN32
+	ap_get_win32_interpreter();
+#endif
+	return 0;
+}

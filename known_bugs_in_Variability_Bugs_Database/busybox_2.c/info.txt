@@ -1,0 +1,8 @@
+[networking/httpd.c]
+---
+int main(int argc, char** argv) {
+#ifdef BB_MMU
+	mini_httpd();
+#endif
+	return 0;
+}

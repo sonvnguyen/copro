@@ -1,0 +1,342 @@
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+		<meta charset="utf-8">
+		<title>The Variability Bugs Database</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+		<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="assets/css/common.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="assets/js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+	<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+	<body><div id="MathJax_Message" style="display: none;"></div>
+		<div id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" style="color:white;" href="#home">The <strong>V</strong>ariability <strong>B</strong>ugs <strong>D</strong>ata<strong>b</strong>ase</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#home">Home</a>
+						</li>
+						<li>
+							<a href="#search">Database</a>
+						</li>
+						<li>
+							<a href="#contribution">Contribute</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="left-inner-addon">
+							<span class="glyphicon glyphicon-search"></span>
+							<input id="search" class="form-control" placeholder="search the database" type="text">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		 
+		<div id="content"><div><div class="container-fluid">
+	<div class="row">
+		<div id="bug_content" class="main">
+			<div class="page-header">
+				<ul class="nav nav-pills pull-right">
+					<li id="raw" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#bug">View raw files <span class="caret"></span> </a>
+						<ul class="dropdown-menu" role="menu"><li><a href="https://bitbucket.org/modelsteam/vbdb/raw/default/linux/simple/f7ab9b4.c" target="_blank">Simplified bug</a></li><li><a href="https://bitbucket.org/modelsteam/vbdb/raw/default/linux/intra/f7ab9b4.c" target="_blank">Single function bug</a></li><li><a href="https://bitbucket.org/modelsteam/vbdb/raw/default/linux/patch/f7ab9b4.diff" target="_blank">Simplified patch</a></li><li><a href="https://bitbucket.org/modelsteam/vbdb/raw/default/linux/report/f7ab9b4.bug" target="_blank">Info</a></li></ul>
+					</li>
+				</ul>
+				
+				<div class="repo-title">
+					<div>
+				    	<img alt="Linux logo" src="http://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png">	
+				    	<span>Linux</span>
+					</div>
+			    	<span class="h3">NULL function pointer dereferenced if SHMEM is enabled but not TMPFS</span>
+			    </div>
+				
+				<span class="hide">linux/f7ab9b4</span>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-6">
+					
+					<p id="descr">The 'readpage' field of `shmem_aops' only points to a concrete function when TMPFS is enabled, otherwise it points to NULL. GPU driver for Intel i915 depends on SHMEM but not on TMPFS, and makes it possible for a NULL readpage() to be dereferenced by read_cache_page().<br>Related to commit ca9ab10033d190c1ede85fdf456307bdfdabf079</p>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<p id="commit_info">
+								But fixed by commit <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c" target="_blank">f7ab9b407b3</a>
+								<br>
+								Parent commit tree <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^" target="_blank">here</a>
+							</p>
+						</div>
+						
+						<div class="col-lg-6">
+							<ul class="nav nav-pills pull-right">
+								<li id="links" class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#bug">Related links <span class="caret"></span> </a>
+									<ul class="dropdown-menu" role="menu"><li><a href="http://cateee.net/lkddb/web-lkddb/DRM_I915.html" target="_blank">DRM_I915: Intel 8xx/9xx/G3x/G4x/HD Graphics</a></li><li><a href="http://cateee.net/lkddb/web-lkddb/SHMEM.html" target="_blank">SHMEM</a></li><li><a href="http://cateee.net/lkddb/web-lkddb/TMPFS.html" target="_blank">TMPFS</a></li><li><a href="http://en.wikipedia.org/wiki/Graphics_Execution_Manager" target="_blank">GEM</a></li><li><a href="http://en.wikipedia.org/wiki/Direct_Rendering_Manager" target="_blank">DRM</a></li></ul>
+								</li>
+							</ul>
+						</div>
+					</div>						
+				</div>
+				
+				<div class="col-lg-6">
+					<table class="table table-bordered table-striped">
+						<tbody><tr><th>Type</th><td> <a href="http://cwe.mitre.org/data/definitions/476.html" target="_blank">null pointer dereference (CWE 476)</a></td></tr><tr><th>Config</th><td><a href="http://cateee.net/lkddb/web-lkddb/DRM_I915.html" target="_blank">DRM_I915</a> &amp;&amp; <a href="http://cateee.net/lkddb/web-lkddb/SHMEM.html" target="_blank">SHMEM</a> &amp;&amp; !<a href="http://cateee.net/lkddb/web-lkddb/TMPFS.html" target="_blank">TMPFS</a> (3rd degree)</td></tr><tr><th>C-features</th><td>FunctionPointers, PointerAliasing, Structs</td></tr><tr><th>Fix-in</th><td>model</td></tr><tr><th>Location</th><td>drivers/gpu/drm/</td></tr></tbody>
+					</table>	
+				</div>
+			</div>
+			
+			<section id="report">
+				<ul class="nav nav-tabs" role="tablist"><li class="active"><a href="#simplified_bug" role="tab" data-toggle="tab">Simplified bug</a></li><li><a href="#simplified_patch" role="tab" data-toggle="tab">Simplified patch</a></li><li><a href="#single_function_bug" role="tab" data-toggle="tab">Single function bug</a></li><li><a href="#trace" role="tab" data-toggle="tab">Trace</a></li><li><a href="#comments" role="tab" data-toggle="tab">Discussion</a></li></ul>
+				<div class="tab-content"><div class="tab-pane active" id="simplified_bug"><code class="language-c prettyprint highlight lang-c linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L1" value="0"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_TMPFS</span><br></li><li class="L2"><span class="pln"></span><span class="com">#define</span><span class="pln"> CONFIG_SHMEM</span><br></li><li class="L3"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="com">#define</span><span class="pln"> NULL </span><span class="pun">((</span><span class="kwd">void</span><span class="pun">*)</span><span class="lit">0</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="kwd">typedef</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> filler_t</span><span class="pun">(</span><span class="kwd">int</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="kwd">int</span><span class="pln"> some_fun</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> n</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_TMPFS</span><br></li><li class="L5"><span class="pln">filler_t </span><span class="pun">*</span><span class="pln">f </span><span class="pun">=</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">some_fun</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="com">#else</span><span class="pln"></span><br></li><li class="L7"><span class="pln">filler_t </span><span class="pun">*</span><span class="pln">f </span><span class="pun">=</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln"> </span><span class="com">// (1)</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_SHMEM</span><br></li><li class="L1"><span class="pln">filler_t</span><span class="pun">*</span><span class="pln"> shmem_get_inode</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> f</span><span class="pun">;</span><span class="pln"> </span><span class="com">// (11)</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="com">#else</span><span class="pln"></span><br></li><li class="L6"><span class="pln">filler_t</span><span class="pun">*</span><span class="pln"> ramfs_get_inode</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">some_fun</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="com">#define</span><span class="pln"> shmem_get_inode</span><span class="pun">()</span><span class="pln"> &nbsp; ramfs_get_inode</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="com">#endif</span><span class="pln"> </span><span class="com">/* CONFIG_SHMEM */</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><br></li><li class="L4"><span class="pln">filler_t</span><span class="pun">*</span><span class="pln"> shmem_file_setup</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> shmem_get_inode</span><span class="pun">();</span><span class="pln"> </span><span class="com">// (10)</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_DRM_I915</span><br></li><li class="L0"><span class="pln"></span><span class="kwd">int</span><span class="pln"> drm_gem_object_init</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; </span><span class="pun">*</span><span class="pln">readpage </span><span class="pun">=</span><span class="pln"> shmem_file_setup</span><span class="pun">();</span><span class="pln"> </span><span class="com">// (9)</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="kwd">void</span><span class="pln"> i915_gem_alloc_object</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">drm_gem_object_init</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="com">// (8)</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; &nbsp; </span><span class="pun">;</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="kwd">void</span><span class="pln"> do_read_cache_page</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">*</span><span class="pln">filler</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L4 red"><span class="pln">&nbsp; filler</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span><span class="pln"> </span><span class="com">// ERROR (18)</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="kwd">void</span><span class="pln"> read_cache_page_gfp</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; &nbsp; filler_t </span><span class="pun">*</span><span class="pln">filler </span><span class="pun">=</span><span class="pln"> </span><span class="pun">*</span><span class="pln">readpage</span><span class="pun">;</span><span class="pln"> </span><span class="com">// (15) filler = NULL</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; &nbsp; do_read_cache_page</span><span class="pun">(</span><span class="pln">filler</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (17)</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="kwd">int</span><span class="pln"> i915_gem_object_get_pages_gtt</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; read_cache_page_gfp</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (15)</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="kwd">int</span><span class="pln"> i915_gem_object_bind_to_gtt</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> i915_gem_object_get_pages_gtt</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (14)</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="kwd">int</span><span class="pln"> i915_gem_object_pin</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> i915_gem_object_bind_to_gtt</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (13)</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="kwd">int</span><span class="pln"> intel_init_ring_buffer</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; i915_gem_alloc_object</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (7) *readpage = NULL</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> i915_gem_object_pin</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (12)</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="kwd">int</span><span class="pln"> intel_init_render_ring_buffer</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L7"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> intel_init_ring_buffer</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (6)</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="kwd">int</span><span class="pln"> i915_gem_init_ringbuffer</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> intel_init_render_ring_buffer</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (5)</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="kwd">int</span><span class="pln"> i915_load_modeset_init</span><span class="pun">(</span><span class="pln">filler_t </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L7"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> i915_gem_init_ringbuffer</span><span class="pun">(</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (4)</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="kwd">int</span><span class="pln"> i915_driver_load</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; filler_t </span><span class="pun">*</span><span class="pln">readpage</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> i915_load_modeset_init</span><span class="pun">(&amp;</span><span class="pln">readpage</span><span class="pun">);</span><span class="pln"> </span><span class="com">// (3)</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_DRM_I915</span><br></li><li class="L0"><span class="pln">&nbsp; i915_driver_load</span><span class="pun">();</span><span class="pln"> </span><span class="com">// (2)</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li></ol></code></div><div class="tab-pane" id="simplified_patch"><code class="language-c prettyprint highlight lang-c linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="pln">diff </span><span class="pun">--</span><span class="pln">git a</span><span class="pun">/</span><span class="pln">simple</span><span class="pun">/</span><span class="pln">f7ab9b4</span><span class="pun">.</span><span class="pln">c b</span><span class="pun">/</span><span class="pln">simple</span><span class="pun">/</span><span class="pln">f7ab9b4</span><span class="pun">.</span><span class="pln">c</span><br></li><li class="L1 red"><span class="pln"></span><span class="pun">---</span><span class="pln"> a</span><span class="pun">/</span><span class="pln">simple</span><span class="pun">/</span><span class="pln">f7ab9b4</span><span class="pun">.</span><span class="pln">c</span><br></li><li class="L2 green"><span class="pln"></span><span class="pun">+++</span><span class="pln"> b</span><span class="pun">/</span><span class="pln">simple</span><span class="pun">/</span><span class="pln">f7ab9b4</span><span class="pun">.</span><span class="pln">c</span><br></li><li class="L3"><span class="pln"></span><span class="pun">@@</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">,</span><span class="lit">5</span><span class="pln"> </span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="lit">6</span><span class="pln"> </span><span class="pun">@@</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp;</span><br></li><li class="L5 red"><span class="pln"></span><span class="pun">-</span><span class="com">#ifdef</span><span class="pln"> CONFIG_TMPFS</span><br></li><li class="L6 green"><span class="pln"></span><span class="pun">+</span><span class="com">#ifdef</span><span class="pln"> CONFIG_DRM_I915</span><br></li><li class="L7 green"><span class="pln"></span><span class="pun">+</span><span class="com">#define</span><span class="pln"> CONFIG_TMPFS</span><br></li><li class="L8"><span class="pln">&nbsp;</span><span class="com">#define</span><span class="pln"> CONFIG_SHMEM</span><br></li><li class="L9"><span class="pln">&nbsp;</span><span class="com">#endif</span><span class="pln"></span><br></li></ol></code></div><div class="tab-pane" id="single_function_bug"><code class="language-c prettyprint highlight lang-c linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L1" value="0"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_TMPFS</span><br></li><li class="L2"><span class="pln"></span><span class="com">#define</span><span class="pln"> CONFIG_SHMEM</span><br></li><li class="L3"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdlib.h&gt;</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="kwd">typedef</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> filler_t</span><span class="pun">(</span><span class="kwd">int</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="kwd">int</span><span class="pln"> some_fun</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> n</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_TMPFS</span><br></li><li class="L5"><span class="pln">filler_t </span><span class="pun">*</span><span class="pln">f </span><span class="pun">=</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">some_fun</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="com">#else</span><span class="pln"></span><br></li><li class="L7"><span class="pln">filler_t </span><span class="pun">*</span><span class="pln">f </span><span class="pun">=</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">{</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="com">#ifdef</span><span class="pln"> CONFIG_DRM_I915</span><br></li><li class="L3"><span class="pln"></span><span class="com">// &nbsp;i915_driver_load();</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; filler_t </span><span class="pun">*</span><span class="pln">readpage</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="com">// &nbsp;return i915_load_modeset_init(&amp;readpage);</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="com">// &nbsp;i915_gem_alloc_object(readpage);</span><span class="pln"></span><br></li><li class="L7"><span class="pln">&nbsp; </span><span class="com">#ifdef</span><span class="pln"> CONFIG_SHMEM</span><br></li><li class="L8"><span class="pln">&nbsp; </span><span class="pun">*</span><span class="pln">readpage </span><span class="pun">=</span><span class="pln"> f</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; </span><span class="com">#else</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; </span><span class="pun">*</span><span class="pln">readpage </span><span class="pun">=</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">some_fun</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; </span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; </span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; </span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="com">// &nbsp;return i915_gem_object_pin(readpage);</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; filler_t </span><span class="pun">*</span><span class="pln">filler </span><span class="pun">=</span><span class="pln"> </span><span class="pun">**</span><span class="pln">readpage</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7 red"><span class="pln">&nbsp; filler</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span><span class="pln"> </span><span class="com">// ERROR</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="com">#endif</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li></ol></code></div><div class="tab-pane" id="trace"><span class="trace"><span class="comment">// shmem_aops only has a function assigned to the readpage field</span></span><br><span class="trace"><span class="comment">// if TMPFS is enabled, otherwise it is NULL</span></span><br><span class="trace"><span class="comment">// see <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/shmem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#nundefined" target="_blank">mm/shmem.c</a>:2454</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/i915_dma.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n1862" target="_blank">drivers/gpu/drm/i915/i915_dma.c</a>:<span class="number">1862</span>:<span class="line">i915_driver_load()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">2011</span>:<span class="line"> ret = i915_load_modeset_init(dev);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/i915_dma.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n1167" target="_blank">drivers/gpu/drm/i915/i915_dma.c</a>:<span class="number">1167</span>:<span class="line">i915_load_modeset_init()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1192</span>:<span class="line"> ret = i915_gem_init_ringbuffer(dev);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/i915_gem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n3649" target="_blank">drivers/gpu/drm/i915/i915_gem.c</a>:<span class="number">3649</span>:<span class="line">i915_gem_init_ringbuffer()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">3654</span>:<span class="line"> ret = intel_init_render_ring_buffer(dev);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/intel_ringbuffer.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n1271" target="_blank">drivers/gpu/drm/i915/intel_ringbuffer.c</a>:<span class="number">1271</span>:<span class="line">intel_init_render_ring_buffer()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1291</span>:<span class="line"> return intel_init_ring_buffer(dev, ring);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/intel_ringbuffer.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n807" target="_blank">drivers/gpu/drm/i915/intel_ringbuffer.c</a>:<span class="number">807</span>:<span class="line">intel_init_ring_buffer()</span></span><br><span class="trace"><span class="comment">// setup: function pointer `readpage' set to NULL</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">827</span>:<span class="line"> obj = i915_gem_alloc_object(dev, ring-&gt;size);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/i915_gem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n3518" target="_blank">drivers/gpu/drm/i915/i915_gem.c</a>:<span class="number">3518</span>:<span class="line">i915_gem_alloc_object()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">3528</span>:<span class="line"> if (drm_gem_object_init(dev, &amp;obj-&gt;base, size) != 0)</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/drm_gem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n134" target="_blank">drivers/gpu/drm/drm_gem.c</a>:<span class="number">134</span>:<span class="line">drm_gem_object_init()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">140</span>:<span class="line"> obj-&gt;filp = shmem_file_setup("drm mm object", size, VM_NORESERVE);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/shmem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n2719" target="_blank">mm/shmem.c</a>:<span class="number">2719</span>:<span class="line">shmem_file_setup()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">2748</span>:<span class="line"> inode = shmem_get_inode(root-&gt;d_sb, NULL, S_IFREG | S_IRWXUGO, 0, flags);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> [SHMEM] ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/shmem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n1577" target="_blank">mm/shmem.c</a>:<span class="number">1577</span>:<span class="line">shmem_get_inode()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1608</span>:<span class="line"> inode-&gt;i_mapping-&gt;a_ops = &amp;shmem_aops;    </span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">836</span>:<span class="line"> ret = i915_gem_object_pin(obj, PAGE_SIZE, true);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/i915_gem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n3246" target="_blank">drivers/gpu/drm/i915/i915_gem.c</a>:<span class="number">3246</span>:<span class="line">i915_gem_object_pin()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">3274</span>:<span class="line"> ret = i915_gem_object_bind_to_gtt(obj, alignment,</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/i915_gem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n2705" target="_blank">drivers/gpu/drm/i915/i915_gem.c</a>:<span class="number">2705</span>:<span class="line">i915_gem_object_bind_to_gtt()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">2779</span>:<span class="line"> ret = i915_gem_object_get_pages_gtt(obj, gfpmask);</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/gpu/drm/i915/i915_gem.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n1488" target="_blank">drivers/gpu/drm/i915/i915_gem.c</a>:<span class="number">1488</span>:<span class="line">i915_gem_object_get_pages_gtt()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1508</span>:<span class="line"> page = read_cache_page_gfp(mapping, i,</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪ <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/filemap.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n1815" target="_blank">mm/filemap.c</a>:<span class="number">1815</span>:<span class="line">read_cache_page_gfp()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1819</span>:<span class="line"> filler_t *filler = (filler_t *)mapping-&gt;a_ops-&gt;readpage;</span></span><br><span class="trace"><span class="comment">// so filler is an alias for readpage, which is NULL</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="number">1821</span>:<span class="line"> return wait_on_page_read(do_read_cache_page(mapping, index, filler, NULL, gfp));</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> ↪  <a href="http://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/mm/filemap.c/?id=f7ab9b407b3bc83161c2aa74c992ba4782e87c9c^#n1728" target="_blank">mm/filemap.c</a>:<span class="number">1728</span>:<span class="line">do_read_cache_page()</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="trace"> <span class="error">ERROR</span> <span class="number">1755</span>:<span class="line"> err = filler(data, page)</span></span><br><span class="trace"><span class="comment">// filler is pointing to NULL !</span></span><br></div><div class="tab-pane" id="comments">
+			<div>
+				<ul class="nav nav-pills pull-right">
+					<li class="active">
+						<a href="#comments_modal" data-toggle="modal">Write comment</a>
+					</li>
+				</ul>
+				<p>You can contribute to this project by writing a comment for this bug.<span class=""> No comments have been submitted for this bug yet.</span></p>
+			</div>
+			<section></section>
+		</div></div>
+			</section>
+		</div>
+		<div id="info" class="main hide">
+			<h3>404: Requested resource not found.</h3>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="comments_modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title">Write comment</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-group">
+					<input id="name_field" class="form-control" placeholder="Name" type="text">
+					<input id="email_field" class="form-control" placeholder="Email" type="email">
+					<textarea class="form-control" rows="3" placeholder="* Comment"></textarea>			
+					<div id="challenge" class="input-group hide">
+  						<span class="input-group-addon"></span>
+  						<input class="form-control" placeholder="* Please answer this challenge" type="number">
+					</div>
+				</form>
+
+				<div class="alert alert-success hide" role="alert">
+					Thank you for your comment.
+				</div>
+				<div class="alert alert-warning hide" role="alert">
+					You must fill in the input fields correctly.
+				</div>
+				<div class="alert alert-danger hide" role="alert">
+					A problem occured, please try again later.
+				</div>
+				<center>
+					<img src="assets/images/ajax-loader.gif" alt="loader">
+				</center>
+			</div>
+			<div class="modal-footer hide">
+				<button type="button" class="btn btn-default" data-dismiss="modal">
+					Cancel
+				</button>
+				<button id="submit" type="button" class="btn btn-primary">
+					Submit
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div></div>
+		
+		<div id="bar" class="progress" style="display: block;">
+			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">Loading in progress 100%</div>
+		</div>
+
+		<script src="assets/js/libs/jquery-1.7.1.min.js"></script>
+		<script src="assets/js/libs/underscore-min.js"></script>
+		<script src="assets/js/libs/backbone-min.js"></script>
+		<script src="assets/js/libs/jquery.syntaxhighlighter.min.js"></script>
+		<script src="assets/js/libs/js-yaml.min.js"></script>
+		<script src="assets/js/libs/jquery.infinitescroll.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" id=""></script>
+
+		<!-- custom code -->
+		<script src="assets/js/app.js"></script>
+		<script src="assets/js/model/Store.js"></script>
+		<script src="assets/js/model/Event.js"></script>
+		<script src="assets/js/model/DataProvider.js"></script>
+		<script src="assets/js/model/BugLoader.js"></script>
+		<script src="assets/js/model/NewsLoader.js"></script>
+		<script src="assets/js/utils/Utils.js"></script>
+		<script src="assets/js/utils/TwoDimensionsDictionary.js"></script>
+		<script src="assets/js/controller/BugDisplayer.js"></script>
+		<script src="assets/js/controller/BugController.js"></script>
+		<script src="assets/js/view/AView.js"></script>
+		<script src="assets/js/view/BugView.js"></script>
+		<script src="assets/js/view/HomeView.js"></script>
+		<script src="assets/js/view/SearchView.js"></script>
+		<script src="assets/js/view/ContributionView.js"></script>
+
+		<script type="text/template" id="comment_block">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<%= author %> <%= date %>
+				</div>
+				<div class="panel-body">
+					<%= content %>
+				</div>
+			</div>
+		</script>
+		
+		<script type="text/template" id="comment_tab">
+			<div>
+				<ul class="nav nav-pills pull-right">
+					<li class="active">
+						<a href="#comments_modal" data-toggle="modal">Write comment</a>
+					</li>
+				</ul>
+				<p>You can contribute to this project by writing a comment for this bug.<span class="hide"> No comments have been submitted for this bug yet.</span></p>
+			</div>
+			<section></section>
+		</script>
+		
+		<!-- Google Analytics -->
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-33454433-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+	
+<script type="text/javascript" src="http://balupton.github.com/jquery-syntaxhighlighter/prettify/prettify.min.js" id="script-httpbaluptongithubcomjquerysyntaxhighlighterprettifyprettifyminjs"></script><link type="text/css" rel="stylesheet" media="screen" href="http://balupton.github.com/jquery-syntaxhighlighter/prettify/prettify.min.css" id="stylesheet-httpbaluptongithubcomjquerysyntaxhighlighterprettifyprettifymincss"><link type="text/css" rel="stylesheet" media="screen" href="http://balupton.github.com/jquery-syntaxhighlighter/styles/style.min.css" id="stylesheet-httpbaluptongithubcomjquerysyntaxhighlighterstylesstylemincss"><link type="text/css" rel="stylesheet" media="screen" href="http://balupton.github.com/jquery-syntaxhighlighter/styles/theme-balupton.min.css" id="stylesheet-httpbaluptongithubcomjquerysyntaxhighlighterstylesthemebaluptonmincss"></body></html>

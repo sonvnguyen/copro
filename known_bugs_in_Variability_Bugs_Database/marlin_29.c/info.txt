@@ -1,0 +1,7 @@
+[Marlin/temperature.cpp]
+---
+int main(void)
+{
+return 0;
+}
+---

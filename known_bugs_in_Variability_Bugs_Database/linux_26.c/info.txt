@@ -1,0 +1,8 @@
+[drivers/block/z2ram.c]
+---
+int main() {
+#ifdef CONFIG_AMIGA_Z2RAM
+	do_z2_request();
+#endif
+	return 0;
+}

@@ -1,0 +1,7 @@
+[init/main.c, init/main.c, mm/slab.c, mm/slab.c, mm/slab.c, include/linux/slab_def.h, include/linux/slab_def.h, mm/slab.c, mm/slab.c, kernel/lockdep.c, kernel/lockdep.c]
+---
+int main() {
+	local_irq_disable();
+	mm_init();
+	return 0;
+}

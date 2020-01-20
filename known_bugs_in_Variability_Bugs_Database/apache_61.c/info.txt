@@ -1,0 +1,6 @@
+[modules/ssl/ssl_engine_config.c]
+---
+int main(void) {
+	ssl_cmd_protocol_parse();
+	return 0;
+}

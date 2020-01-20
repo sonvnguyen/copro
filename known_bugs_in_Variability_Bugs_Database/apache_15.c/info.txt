@@ -1,0 +1,6 @@
+[server/core_filters.c]
+---
+int main(void) {
+	send_brigade_nonblocking();
+	return 0;
+}

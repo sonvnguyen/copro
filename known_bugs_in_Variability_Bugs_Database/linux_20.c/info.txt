@@ -1,0 +1,6 @@
+[arch/arm/mach-omap2/board-omap3pandora.c, arch/arm/mach-omap2/io.c, arch/arm/plat-omap/sram.c, arch/arm/plat-omap/sram.c, arch/arm/mach-omap2/io.c, arch/arm/mach-omap2/clock.c, arch/arm/mach-omap2/clkt34xx_dpll3m2.c, arch/arm/plat-omap/sram.c]
+---
+int main(void) {
+	omap3pandora_init(); // (1)
+	return 0;
+}

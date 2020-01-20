@@ -1,0 +1,8 @@
+[mm/slab.c, mm/slab.c, mm/slab.c]
+---
+int main(void) {
+#ifndef CONFIG_SLOB
+	kmem_cache_init_late(); // (1)
+#endif
+	return 0;
+}

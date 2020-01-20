@@ -1,0 +1,8 @@
+Marlin/ConfigurationStore.cpp
+---
+int main(int argc, char **argv)
+{
+  
+  Config_ResetDefault();
+  return 0;
+}

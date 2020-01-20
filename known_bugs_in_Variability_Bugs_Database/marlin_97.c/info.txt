@@ -1,0 +1,7 @@
+[Marlin/Marlin_main.cpp]
+---
+int main(int argc, char **argv)
+{
+  getCode();
+  return 0;
+}

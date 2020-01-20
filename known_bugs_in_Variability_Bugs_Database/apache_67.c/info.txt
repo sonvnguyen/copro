@@ -1,0 +1,6 @@
+[modules/generators/mod_cgid.c, modules/generators/mod_cgid.c, modules/generators/mod_cgid.c, modules/generators/mod_cgid.c, modules/generators/mod_cgid.c]
+---
+int main(void) {
+	send_req();
+	return 0;
+}

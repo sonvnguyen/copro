@@ -1,0 +1,8 @@
+[block/cfq-iosched.c]
+---
+int main() {
+#ifdef CONFIG_IOSCHED_CFQ
+	cfq_scale_slice();
+#endif
+	return 0;
+}

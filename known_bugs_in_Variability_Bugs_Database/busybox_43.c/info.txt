@@ -1,0 +1,6 @@
+[modutils/modprobe.c]
+---
+int main(int argc, char **argv) {
+	build_dep();
+	return 0;
+}

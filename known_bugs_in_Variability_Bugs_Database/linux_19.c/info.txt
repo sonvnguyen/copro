@@ -1,0 +1,6 @@
+[net/core/dev.c, net/core/dev.c, net/core/dev.c, include/linux/if_vlan.h]
+---
+int main(void) {
+	netif_receive_skb(); // (1)
+	return 0;
+}

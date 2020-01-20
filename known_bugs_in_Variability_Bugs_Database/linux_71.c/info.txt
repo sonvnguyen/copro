@@ -1,0 +1,9 @@
+drivers/acpi/video.c
+---
+int main(int argc, char** argv)
+{
+#if defined(CONFIG_ACPI) && defined(CONFIG_STUB_POULSBO)
+  acpi_video_bus_put_one_device();
+#endif
+  return 0;
+}

@@ -1,0 +1,8 @@
+[fs/proc/task_mmu.c, mm/pagewalk.c, mm/pagewalk.c, mm/pagewalk.c, fs/proc/task_mmu.c, fs/proc/task_mmu.c]
+---
+int main(int argc, char** argv) {
+#ifdef CONFIG_PROC_PAGE_MONITOR
+	pagemap_read(); // (1)
+#endif
+	return 0;
+}

@@ -1,0 +1,11 @@
+[coreutils/ls.c, coreutils/ls.c]
+---
+int main(int argc, char** argv) {
+	all_fmt = LIST_FILENAME;
+
+	if (rand() % 2) {
+		all_fmt &= ~TIME_MASK;
+	}
+
+	return 0;
+}

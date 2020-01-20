@@ -1,0 +1,6 @@
+[sysklogd/syslogd.c, sysklogd/syslogd.c]
+---
+int main(int argc, char** argv) {
+	doSyslogd();
+	return 0;
+}

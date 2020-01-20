@@ -1,0 +1,6 @@
+[arch/blackfin/mach-common/pm.c]
+---
+int main(int argc, char** argv) {
+	bfin_pm_suspend_mem_enter();
+	return 0;
+}

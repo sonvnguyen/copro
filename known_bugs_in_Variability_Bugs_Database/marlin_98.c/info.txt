@@ -1,0 +1,6 @@
+[Marlin/temperature.cpp]
+---
+int main(int argc, char** argv) {
+	manage_heater();
+	return 0;
+}

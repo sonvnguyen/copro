@@ -1,0 +1,8 @@
+[crypto/tcrypt.c]
+---
+int main(int argc, char** argv)
+{
+#ifdef CONFIG_CRYPTO_TEST
+  test_cipher();
+#endif
+}

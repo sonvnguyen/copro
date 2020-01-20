@@ -1,0 +1,8 @@
+[coreutils/mv.c, root/utility.c, root/utility.c]
+---
+int main(int argc, char **argv) {
+#if defined (BB_CP_MV)
+	copyFile();
+#endif
+	return 0;
+}

@@ -1,0 +1,8 @@
+[mm/shmem.c, drivers/gpu/drm/i915/i915_dma.c, drivers/gpu/drm/i915/i915_dma.c, drivers/gpu/drm/i915/i915_gem.c, drivers/gpu/drm/i915/intel_ringbuffer.c, drivers/gpu/drm/i915/intel_ringbuffer.c, drivers/gpu/drm/i915/i915_gem.c, drivers/gpu/drm/drm_gem.c, mm/shmem.c, mm/shmem.c, drivers/gpu/drm/i915/i915_gem.c, drivers/gpu/drm/i915/i915_gem.c, drivers/gpu/drm/i915/i915_gem.c, mm/filemap.c, mm/filemap.c]
+---
+int main() {
+#ifdef CONFIG_DRM_I915
+	i915_driver_load(); // (2)
+#endif
+	return 0;
+}

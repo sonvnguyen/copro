@@ -1,0 +1,9 @@
+[modules/experimental/util_ldap_cache.c, modules/experimental/util_ldap_cache.c, modules/experimental/util_ldap_cache.c, modules/experimental/util_ldap_cache.c]
+---
+int main(void) {
+	if (rand() % 2) {
+		cache = malloc(sizeof(int));
+	}
+	util_ldap_cache_init();
+	return 0;
+}

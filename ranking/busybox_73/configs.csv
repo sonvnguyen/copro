@@ -1,0 +1,86 @@
+# ACTS Test Suite Generation: Mon Feb 19 01:02:24 CST 2018
+#  * represents don't care value 
+
+# Degree of interaction coverage: 4
+# Number of parameters: 26
+# Maximum number of values per parameter: 2
+# Number of configurations: 77
+# ****************************************************
+CONFIG_FEATURE_USE_INITTAB,MAX,CONFIG_FEATURE_TOP_CPU_USAGE_PERCENTAGE,CONFIG_SYSLOGD,CONFIG_FEATURE_DEVFS,COMM_LEN,TASK_COMM_LEN,RB_POWER_OFF,CONFIG_SELINUX,_PATH_STDPATH,CONFIG_INSTALL_NO_USR,__LIBBUSYBOX_H__,BB_NOMMU,CONFIG_FEATURE_BUFFERS_GO_ON_STACK,MAKE_LINKS,ENABLE_DEBUG_INIT,_BB_INTERNAL_H_,PATH_MAX,__GLIBC__<2,PROTOTYPES,CONFIG_FEATURE_INIT_SCTTY,MIN,CONFIG_FEATURE_BUFFERS_GO_IN_BSS,CONFIG_FEATURE_INIT_COREDUMPS,INIT_SCRIPT,BUFSIZ
+true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true
+true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false
+true,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true
+true,true,false,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false
+true,false,true,true,false,false,true,true,false,false,true,true,false,false,true,true,false,false,true,true,false,false,true,true,false,false
+true,false,true,false,true,true,false,false,true,true,false,false,true,true,false,false,true,true,false,false,true,true,false,false,true,true
+true,false,false,true,true,false,false,true,true,false,false,false,false,true,true,false,false,true,true,true,true,false,false,false,false,true
+true,false,false,false,false,true,true,false,false,true,true,true,true,false,false,true,true,false,false,false,false,true,true,true,true,false
+false,true,true,true,false,true,true,false,true,false,false,true,false,true,true,false,true,false,false,true,false,true,true,false,false,true
+false,true,true,false,true,false,false,true,false,true,true,false,true,false,false,true,false,true,true,false,true,false,false,true,true,false
+false,true,false,true,true,true,false,false,false,false,true,false,false,false,true,true,true,true,false,false,false,false,true,true,false,true
+false,true,false,false,false,false,true,true,true,true,false,true,true,true,false,false,false,false,true,true,true,true,false,false,true,false
+false,false,true,true,true,false,true,false,false,true,false,false,false,true,false,true,true,false,true,true,true,false,true,false,true,true
+false,false,true,false,false,true,false,true,true,false,true,true,true,false,true,false,false,true,false,false,false,true,false,true,false,false
+false,false,false,true,false,false,false,false,true,true,true,false,true,true,true,true,false,false,false,false,true,true,true,false,false,false
+false,false,false,false,true,true,true,true,false,false,false,true,false,false,false,false,true,true,true,true,false,false,false,true,true,true
+false,false,true,true,true,true,false,true,false,true,false,true,true,false,true,false,true,false,true,false,true,true,true,false,false,false
+true,true,true,false,true,true,true,true,false,false,false,false,true,true,true,true,false,false,false,true,false,false,false,false,true,true
+false,false,false,true,false,true,true,true,true,false,true,false,false,true,false,true,true,true,true,false,true,true,false,true,false,false
+false,true,false,false,false,true,false,false,true,true,false,false,false,false,true,true,false,true,true,true,false,false,true,false,true,false
+true,true,true,true,true,false,false,false,true,true,true,true,false,false,false,false,false,true,false,true,true,true,true,true,true,true
+true,false,true,false,true,false,true,false,true,false,true,true,false,true,false,true,false,true,false,false,false,false,true,false,false,true
+true,true,false,true,false,false,true,false,false,false,false,true,true,false,false,true,true,true,true,false,true,true,false,false,false,true
+false,false,false,false,false,false,false,true,false,false,false,false,true,true,true,false,true,false,false,true,false,true,true,true,true,true
+true,false,false,true,true,true,true,false,false,true,true,false,false,false,true,false,false,false,false,true,true,true,false,true,false,false
+true,false,true,false,false,true,true,true,true,true,false,false,false,false,false,false,true,false,true,false,false,false,true,true,false,true
+false,true,false,true,true,false,false,true,true,false,true,true,true,true,false,false,true,false,false,false,false,false,false,true,true,false
+false,false,true,true,false,false,false,false,false,false,true,true,true,true,false,false,false,true,true,true,false,false,false,false,true,false
+true,false,false,false,true,true,false,true,true,true,true,true,false,true,true,true,true,false,true,true,true,false,false,false,false,false
+false,true,false,false,true,true,true,false,false,true,true,true,true,true,true,false,false,true,false,false,true,false,true,true,false,true
+false,true,true,false,false,false,true,false,true,true,true,false,false,true,true,false,true,true,false,true,false,true,false,true,true,false
+true,false,false,false,true,false,true,true,false,true,false,true,true,false,true,true,false,true,false,false,false,true,true,false,true,false
+true,true,true,true,false,true,false,true,true,false,true,false,true,false,false,true,true,false,true,true,true,true,true,false,false,true
+true,false,false,false,false,false,false,false,true,false,false,true,false,false,true,true,true,false,false,true,true,false,false,true,true,true
+false,true,true,true,false,true,true,true,false,true,true,false,false,false,true,false,false,false,true,false,true,false,false,false,true,true
+true,true,true,true,true,false,true,true,true,true,false,false,true,false,false,true,false,true,false,false,false,true,true,true,false,false
+true,true,true,false,true,true,false,false,false,false,false,true,false,true,true,true,true,true,true,false,true,true,true,true,true,false
+false,false,true,false,false,true,true,false,false,false,false,false,true,false,false,true,false,false,true,true,true,true,true,true,false,true
+false,false,true,true,true,true,true,false,true,false,true,false,true,false,false,false,false,false,false,true,false,false,false,false,false,true
+false,false,false,false,true,false,false,false,true,true,false,true,false,false,false,true,false,false,true,false,false,true,false,true,false,true
+true,false,true,false,false,false,false,false,false,true,true,true,false,true,true,false,true,true,true,false,false,false,true,false,false,true
+false,true,false,false,true,false,true,true,false,false,false,false,false,false,false,false,true,true,false,true,true,true,true,false,false,false
+true,false,false,false,false,true,true,true,false,false,true,false,true,true,true,false,false,true,true,true,false,true,true,false,true,false
+true,true,false,false,false,false,true,true,false,true,true,true,false,false,true,false,true,false,false,true,true,false,false,false,false,true
+false,false,false,true,false,true,false,false,true,false,false,true,true,true,false,true,false,true,false,false,true,false,true,true,true,false
+true,true,false,true,false,true,false,true,false,true,false,false,true,true,true,false,true,false,false,false,false,false,false,true,true,false
+false,true,true,true,true,false,false,true,true,false,false,true,false,true,true,true,false,false,true,false,false,true,false,false,true,true
+true,true,true,false,false,false,false,false,false,true,true,true,true,true,false,true,true,false,false,true,true,false,false,true,false,false
+false,true,false,true,true,true,true,true,true,true,true,true,false,false,false,true,true,true,false,true,false,false,true,false,true,false
+true,false,false,true,true,true,false,false,false,false,true,false,true,true,false,true,false,false,true,true,false,true,false,true,true,true
+false,false,false,true,false,false,false,false,false,true,true,false,true,false,false,false,true,true,true,true,false,true,true,true,false,true
+false,false,false,true,false,false,false,true,true,true,false,true,false,false,true,false,true,true,false,false,true,false,false,false,true,true
+true,true,false,false,false,true,false,false,true,false,true,false,false,true,false,false,false,true,true,false,true,false,true,true,false,true
+false,false,true,false,false,true,false,true,false,true,true,true,false,true,false,true,false,false,false,false,true,true,true,false,true,true
+true,false,true,true,true,false,false,false,true,false,false,false,true,false,true,true,true,true,true,true,false,false,false,true,true,false
+true,false,true,true,false,false,true,true,false,false,false,true,true,true,false,false,false,true,false,false,true,false,true,true,false,true
+false,false,false,false,true,true,true,false,true,false,true,false,true,true,true,true,true,false,false,true,true,true,false,false,false,false
+false,true,false,true,false,true,false,false,false,true,false,true,false,false,false,false,true,true,true,false,false,true,false,false,false,false
+true,true,true,true,true,true,true,false,true,false,false,true,true,true,true,false,false,false,true,false,false,false,true,true,false,false
+true,false,true,true,false,false,true,true,false,false,false,false,false,false,true,true,true,true,true,false,true,true,false,false,true,false
+false,true,false,false,false,true,true,false,false,false,false,false,false,false,true,true,false,false,false,false,false,false,false,true,true,true
+false,true,true,true,true,true,false,true,false,true,true,false,false,true,true,false,false,false,false,true,false,true,true,false,false,false
+true,false,true,false,false,true,true,true,false,false,true,true,true,false,false,false,true,true,false,true,true,false,true,false,true,true
+false,true,true,false,true,false,true,false,true,true,false,true,false,false,true,false,true,true,false,false,true,true,false,true,false,true
+true,true,false,false,false,false,false,true,false,true,true,true,true,true,false,false,false,false,true,true,false,false,true,false,false,true
+true,false,false,true,true,false,true,true,true,false,true,false,false,true,true,true,true,false,true,false,false,true,false,true,true,false
+true,false,false,true,true,false,false,true,false,true,false,true,false,true,false,true,false,false,true,true,true,true,true,true,true,false
+false,false,true,true,false,false,true,false,true,true,true,false,true,false,true,true,false,true,true,false,false,false,false,true,false,true
+false,true,true,false,true,true,false,true,true,false,false,false,false,true,true,true,true,true,false,true,true,false,false,false,false,false
+true,true,false,false,false,true,false,true,true,false,true,false,true,true,true,false,true,true,false,false,false,true,true,false,true,true
+false,false,false,false,true,false,true,true,true,true,true,true,true,true,false,false,false,false,false,true,false,false,true,false,false,true
+true,true,false,false,false,false,true,false,false,false,true,false,false,true,true,true,true,true,true,true,true,true,false,true,false,true
+false,true,true,true,true,false,true,false,true,true,false,true,false,false,false,true,true,true,false,true,true,true,true,true,false,false
+true,true,true,true,false,true,true,false,true,false,false,false,false,true,false,false,false,false,true,false,true,true,false,true,true,false
+true,false,true,true,false,true,false,false,false,true,false,true,false,true,true,false,false,false,false,true,false,false,true,false,true,true
+false,true,true,false,true,true,false,true,false,false,false,true,true,false,false,true,true,false,true,false,true,true,true,false,true,true
+true,false,true,false,true,false,true,false,false,false,false,false,false,false,true,true,true,true,true,false,true,false,false,true,true,false

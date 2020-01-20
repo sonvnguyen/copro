@@ -1,0 +1,6 @@
+[modules/experimental/util_ldap.c, modules/experimental/util_ldap_cache_mgr.c, modules/experimental/util_ldap_cache_mgr.c]
+---
+int main(void) {
+	util_ald_create_caches(rmm_addr);
+	return 0;
+}

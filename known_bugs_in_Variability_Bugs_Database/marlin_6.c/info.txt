@@ -1,0 +1,9 @@
+[Marlin/stepper.cpp]
+---
+int main(void) 
+{
+#ifdef BABYSTEPPING
+    babystep(0, false);
+#endif
+    return 0;
+}

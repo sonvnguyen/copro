@@ -1,0 +1,9 @@
+[arch/mips/bcm47xx/gpio.c]
+---
+int main(int argc, char** argv)
+{
+#ifdef CONFIG_BCM47XX
+ bcm47xx_gpio_get_value();
+#endif
+  return 0;
+}

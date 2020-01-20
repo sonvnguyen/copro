@@ -1,0 +1,6 @@
+[src/modules/standard/mod_rewrite.c]
+---
+int main(void) {
+	apply_rewrite_rule();
+	return 0;
+}
