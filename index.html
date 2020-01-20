@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/logo.ico">
+
+    <title>Feature-Interaction Aware Configuration Prioritization for Configurable Code</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+	 
+	 
+    <style>
+       p {
+       text-align: justify;
+       text-justify: inter-word;
+       }
+       .tt{
+       	font-size: 10pt;
+			margin-top:10pt;
+			margin-bottom:5pt;				
+			font-style: italic;
+			text-align: center;
+       }
+		 .col-md-6{
+		 	text-align: center;
+		 }
+		 h4{
+		 	margin-top: 1.5rem;
+		 }
+    </style>
+	 
+	 
+	 
+	 <!-- Global site tag (gtag.js) - Google Analytics -->
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76613177-2"></script>
+	 <script>
+	   window.dataLayer = window.dataLayer || [];
+	   function gtag(){dataLayer.push(arguments);}
+	   gtag('js', new Date());
+
+	   gtag('config', 'UA-76613177-2');
+	 </script>
+	 
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color:#000000 !important">
+        <a class="navbar-brand" href="#abstract">CoPro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="17_potential_bugs">Not-Yet-Discovered Bugs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ranking">Empirical Results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bugs_in_the_wild">Bugs in the Wild</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ASE19_CoPro.pdf">Paper</a>
+            </li> 
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+      <div class="container marketing">
+        <!-- START THE FEATURETTES -->
+		  <hr/>
+        <div class="row featurette">
+			 <div class="col-md-1"></div>
+          <div class="col-md-10" id="abstract">
+				 <h2 class="featurette-heading" style="margin:2rem 2rem; text-align: center;">Feature-Interaction Aware Configuration Prioritization for Configurable Code</h2>
+             <p class="lead">
+					 Unexpected interactions among features induce most bugs in a configurable software system. Exhaustively analyzing all the exponential number of possible configurations is prohibitively costly. Thus, various sampling techniques have been proposed to systematically narrow down the exponential number legal configurations to be tested. Since testing all selected configurations can require a huge amount of effort, fault-based configuration prioritization, that helps detect faults earlier, can yield practical benefits in quality assurance. In this paper, we propose CoPro, a novel formulation of feature-interaction bugs via common program entities enabled/disabled by the features. Leveraging from that, we develop an efficient feature-interaction-aware configuration prioritization technique for a configurable system by ranking the configurations according to their total number of potential bugs. We conducted several experiments to evaluate CoPro on the ability to detect configuration-related bugs in a public benchmark. We found that CoPro outperforms the state-of-the-art configuration prioritization techniques when we add them on advanced sampling algorithms. In 78% of the cases, CoPro ranks the buggy configs at the top 3 positions. Interestingly, CoPro is able to detect 17 not-yet-discovered feature-interaction bugs.
+             </p>
+          </div>
+        <hr class="featurette-divider">
+		  
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+    </main>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,5 +1,37 @@
-<h2 align="center">Feature-Interaction Aware Configuration Prioritization for Configurable Code</h2>
+## Welcome to GitHub Pages
 
-<dev style="text-align:justify; text-justify: inter-word;">
-Unexpected interactions among features induce most bugs in a configurable software system. Exhaustively analyzing all the exponential number of possible configurations is prohibitively costly. Thus, various sampling techniques have been proposed to systematically narrow down the exponential number legal configurations to be tested. Since testing all selected configurations can require a huge amount of effort, fault-based configuration prioritization, that helps detect faults earlier, can yield practical benefits in quality assurance. In this paper, we propose CoPo, a novel formulation of feature-interaction bugs via common program entities enabled/disabled by the features. Leveraging from that, we develop an efficient feature-interaction-aware configuration prioritization technique for a configurable system by ranking the configurations according to their total number of potential bugs. We conducted several experiments to evaluate CoPo on the ability to detect configuration-related bugs in a public benchmark. We found that CoPo outperforms the state-of-the-art configuration prioritization techniques when we add them on advanced sampling algorithms. In 78% of the cases, CoPo ranks the buggy configurations at the top 3 positions. Interestingly, CoPo is able to detect 17 not-yet-discovered feature-interaction bugs.  
-</dev>
+You can use the [editor on GitHub](https://github.com/doubledoubleblind/autosc/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### Markdown
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Jekyll Themes
+
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/doubledoubleblind/autosc/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
